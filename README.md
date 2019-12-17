@@ -5,8 +5,8 @@ MovieNight is a sample Android application that uses the clean architecture appr
 
 P.S: [I've written a blog post about this project.](https://goo.gl/KoVEh5)
 
-![Screenshots](https://github.com/automaker10/MN-Espresso/blob/master/screenshots/screens-es-1.jpg)
-![Screenshots](https://github.com/automaker10/MN-Espresso/blob/master/screenshots/screens-es-2.jpg)
+![Screenshots](https://github.com/automaker10/MN_Espresso/blob/master/screenshots/screens-es-1.jpg)
+![Screenshots](https://github.com/automaker10/MN_Espresso/blob/master/screenshots/screens-es-2.jpg)
 
 ### Espresso Testing: ### 
 File TestScript is found: `.../presentation/java/androidtest/...` \
