@@ -4,7 +4,6 @@ import com.yossisegev.domain.MoviesRepository
 import com.yossisegev.domain.usecases.GetPopularMovies
 import com.yossisegev.movienight.MovieEntityMovieMapper
 import com.yossisegev.movienight.common.ASyncTransformer
-import com.yossisegev.movienight.di.popular.PopularScope
 import com.yossisegev.movienight.popularmovies.PopularMoviesVMFactory
 import dagger.Module
 import dagger.Provides

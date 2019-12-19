@@ -6,8 +6,6 @@ package com.yossisegev.data
 import com.yossisegev.data.repositories.MemoryMoviesCache
 import com.yossisegev.domain.common.DomainTestUtils.Companion.generateMovieEntityList
 import com.yossisegev.domain.common.DomainTestUtils.Companion.getTestMovieEntity
-import org.junit.Assert.assertFalse
-import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 
@@ -65,8 +63,8 @@ class MemoryMoviesCacheTests {
 
     @Test
     fun testIsEmptyReturnsExpectedResult() {
-        memoryMoviesCache.isEmpty().test().assertValue{ value -> value }
+        memoryMoviesCache.isEmpty().test().assertValue { value -> value }
         memoryMoviesCache.saveAll(generateMovieEntityList())
-        memoryMoviesCache.isEmpty().test().assertValue{ value -> !value }
+        memoryMoviesCache.isEmpty().test().assertValue { value -> !value }
     }
 }

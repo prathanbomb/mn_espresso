@@ -17,7 +17,7 @@ class TestMoviesCache : MoviesCache {
     }
 
     override fun isEmpty(): Observable<Boolean> {
-        return Observable.fromCallable {  movies.isEmpty() }
+        return Observable.fromCallable { movies.isEmpty() }
     }
 
     override fun remove(movieEntity: MovieEntity) {

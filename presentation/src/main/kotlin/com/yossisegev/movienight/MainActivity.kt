@@ -1,9 +1,9 @@
 package com.yossisegev.movienight
 
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yossisegev.movienight.favorites.FavoriteMoviesFragment
 import com.yossisegev.movienight.popularmovies.PopularMoviesFragment
 import com.yossisegev.movienight.search.SearchFragment

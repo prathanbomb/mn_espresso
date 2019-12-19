@@ -1,11 +1,12 @@
 package com.yossisegev.movienight.di
 
-import com.yossisegev.movienight.di.modules.*
-import com.yossisegev.movienight.MainActivity
 import com.yossisegev.movienight.di.details.MovieDetailsModule
 import com.yossisegev.movienight.di.details.MovieDetailsSubComponent
 import com.yossisegev.movienight.di.favorites.FavoriteModule
 import com.yossisegev.movienight.di.favorites.FavoritesSubComponent
+import com.yossisegev.movienight.di.modules.AppModule
+import com.yossisegev.movienight.di.modules.DataModule
+import com.yossisegev.movienight.di.modules.NetworkModule
 import com.yossisegev.movienight.di.popular.PopularMoviesModule
 import com.yossisegev.movienight.di.popular.PopularSubComponent
 import com.yossisegev.movienight.di.search.SearchMoviesModule

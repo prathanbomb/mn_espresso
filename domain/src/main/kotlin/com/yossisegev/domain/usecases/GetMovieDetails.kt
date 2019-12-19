@@ -5,8 +5,6 @@ import com.yossisegev.domain.common.Transformer
 import com.yossisegev.domain.entities.MovieEntity
 import com.yossisegev.domain.entities.Optional
 import io.reactivex.Observable
-import io.reactivex.ObservableTransformer
-import java.lang.IllegalArgumentException
 
 /**
  * Created by Yossi Segev on 11/11/2017.

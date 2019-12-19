@@ -1,6 +1,6 @@
 package com.yossisegev.movienight.details
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 import com.yossisegev.domain.common.Mapper
 import com.yossisegev.domain.entities.MovieEntity
 import com.yossisegev.domain.usecases.CheckFavoriteStatus
@@ -65,10 +65,10 @@ class MovieDetailsViewModel(private val getMovieDetails: GetMovieDetails,
                 }
             }
         }.subscribe({ isFavorite ->
-                    favoriteState.value = isFavorite
-                }, {
-                    errorState.value = it
-                }))
+            favoriteState.value = isFavorite
+        }, {
+            errorState.value = it
+        }))
     }
 
     private fun onMovieDetailsReceived(movie: Movie) {

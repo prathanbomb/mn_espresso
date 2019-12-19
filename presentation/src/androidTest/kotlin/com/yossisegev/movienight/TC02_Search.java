@@ -1,22 +1,22 @@
 package com.yossisegev.movienight;
 
-import android.support.test.espresso.ViewInteraction;
-import android.support.test.filters.LargeTest;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.espresso.ViewInteraction;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.Espresso.pressBack;
-import static android.support.test.espresso.action.ViewActions.clearText;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.typeTextIntoFocusedView;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.Espresso.pressBack;
+import static androidx.test.espresso.action.ViewActions.clearText;
+import static androidx.test.espresso.action.ViewActions.click;
+import static androidx.test.espresso.action.ViewActions.typeTextIntoFocusedView;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
@@ -27,23 +27,23 @@ public class TC02_Search {
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
     @Test
-    public void Search(){
-        try{
+    public void Search() {
+        try {
             ViewInteraction bottomNavigationItemView = onView(allOf(withId(R.id.action_search),
-                    withContentDescription("Search"),isDisplayed()));
+                    withContentDescription("Search"), isDisplayed()));
             bottomNavigationItemView.perform(click());
 
-        String [] words = {"Avengers : Endgame","Avengers : Endgame 3333","Endgame"};
-            for(int i=0;i<words.length;i++){
-                ViewInteraction SearchEditText  = onView(withId(R.id.search_movies_edit_text));
-                    SearchEditText.perform(typeTextIntoFocusedView(words[i]));
-                    System.out.println(words[i]);
+            String[] words = {"Avengers : Endgame", "Avengers : Endgame 3333", "Endgame"};
+            for (int i = 0; i < words.length; i++) {
+                ViewInteraction SearchEditText = onView(withId(R.id.search_movies_edit_text));
+                SearchEditText.perform(typeTextIntoFocusedView(words[i]));
+                System.out.println(words[i]);
 
                 Thread.sleep(3000);
-                    SearchEditText.perform(clearText());
+                SearchEditText.perform(clearText());
 
-                    pressBack();
-                    Thread.sleep(1000);
+                pressBack();
+                Thread.sleep(1000);
 
             }
 //              *** .JSON
@@ -74,7 +74,7 @@ public class TC02_Search {
 //            WORKBOOK workbook = new XSSFWORK();
 
             Thread.sleep(3000);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

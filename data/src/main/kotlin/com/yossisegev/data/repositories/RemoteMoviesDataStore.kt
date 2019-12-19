@@ -1,14 +1,9 @@
 package com.yossisegev.data.repositories
 
 import com.yossisegev.data.api.Api
-import com.yossisegev.data.entities.DetailsData
-import com.yossisegev.data.entities.MovieData
 import com.yossisegev.data.mappers.DetailsDataMovieEntityMapper
 import com.yossisegev.data.mappers.MovieDataEntityMapper
-import com.yossisegev.data.mappers.MovieEntityDataMapper
-import com.yossisegev.domain.common.Mapper
 import com.yossisegev.domain.MoviesDataStore
-import com.yossisegev.domain.entities.MovieDetailsEntity
 import com.yossisegev.domain.entities.MovieEntity
 import com.yossisegev.domain.entities.Optional
 import io.reactivex.Observable

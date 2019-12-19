@@ -2,9 +2,9 @@
 
 package com.yossisegev.movienight
 
-import android.arch.lifecycle.Observer
-import android.support.test.annotation.UiThreadTest
-import android.support.test.runner.AndroidJUnit4
+import androidx.lifecycle.Observer
+import androidx.test.annotation.UiThreadTest
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.yossisegev.domain.MoviesRepository
 import com.yossisegev.domain.common.DomainTestUtils
 import com.yossisegev.domain.common.TestTransformer

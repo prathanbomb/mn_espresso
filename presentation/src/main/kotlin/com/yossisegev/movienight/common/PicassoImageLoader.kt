@@ -1,7 +1,5 @@
 package com.yossisegev.movienight.common
 
-import android.graphics.Bitmap
-import android.widget.EdgeEffect
 import android.widget.ImageView
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -22,7 +20,7 @@ class PicassoImageLoader(private val picasso: Picasso) : ImageLoader {
             picasso.load(url).noFade().into(imageView)
     }
 
-    private class FetchCallback(val delegate: (Boolean) -> Unit): Callback {
+    private class FetchCallback(val delegate: (Boolean) -> Unit) : Callback {
         override fun onSuccess() {
             delegate(true)
         }

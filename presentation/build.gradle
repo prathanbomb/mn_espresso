@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.yossisegev.movienight"
         minSdkVersion rootProject.ext.minSdkVersion
@@ -27,56 +27,57 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
+    buildToolsVersion = '29.0.2'
 }
 
 dependencies {
 
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:appcompat-v7:$androidSupportLibVersion"
-    implementation "com.android.support:recyclerview-v7:$androidSupportLibVersion"
-    implementation "com.android.support:design:$androidSupportLibVersion"
-    implementation "com.android.support:cardview-v7:$androidSupportLibVersion"
-    implementation "com.android.support.constraint:constraint-layout:1.1.3"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     // ... more entries
     testImplementation 'junit:junit:4.12'
     // required if you want to use Mockito for unit tests
-    testImplementation 'org.mockito:mockito-core:2.24.5'
+    testImplementation 'org.mockito:mockito-core:3.2.4'
     // required if you want to use Mockito for Android tests
-    androidTestImplementation 'org.mockito:mockito-android:2.24.5'
+    androidTestImplementation 'org.mockito:mockito-android:3.2.4'
 
-    kapt rootProject.ext.daggerCompiler
-    implementation rootProject.ext.dagger
-    implementation rootProject.ext.rxJava
-    implementation rootProject.ext.retrofit
-    implementation rootProject.ext.retrofitGsonConverter
-    implementation rootProject.ext.retrofitRxJava2Adapter
-    implementation rootProject.ext.room
+    kapt 'com.google.dagger:dagger-compiler:2.25.3'
+    implementation 'com.google.dagger:dagger:2.25.3'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.0'
+    implementation 'androidx.room:room-runtime:2.2.2'
 
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-    implementation "android.arch.lifecycle:extensions:1.1.1"
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'co.lujun:androidtagview:1.1.4'
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.2'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
 
     testImplementation rootProject.ext.junit
-    testImplementation rootProject.ext.mockito
-    androidTestImplementation rootProject.ext.androidTestRunner
-    androidTestImplementation 'org.mockito:mockito-android:2.8.47'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation 'org.mockito:mockito-core:3.2.4'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'org.mockito:mockito-android:3.2.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation project(':data')
     implementation project(':domain')
-    androidTestImplementation 'com.android.support.test:rules:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2', {
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
         exclude group: 'com.android.support', module: 'support-v4'
         exclude group: 'com.android.support', module: 'design'
         exclude group: 'com.android.support', module: 'recyclerview-v7'
     }
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
-    implementation 'com.googlecode.json-simple:json-simple:1.1'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
 
 }

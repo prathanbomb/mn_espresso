@@ -1,9 +1,9 @@
 package com.yossisegev.movienight.common
 
 import android.app.ActivityOptions
-import android.support.v4.app.Fragment
 import android.util.Pair
 import android.view.View
+import androidx.fragment.app.Fragment
 import com.yossisegev.movienight.R
 import com.yossisegev.movienight.details.MovieDetailsActivity
 import com.yossisegev.movienight.entities.Movie
@@ -11,7 +11,7 @@ import com.yossisegev.movienight.entities.Movie
 /**
  * Created by Yossi Segev on 19/02/2018.
  */
-open class BaseFragment: Fragment() {
+open class BaseFragment : Fragment() {
 
     protected fun navigateToMovieDetailsScreen(movie: Movie, view: View) {
         var activityOptions: ActivityOptions? = null

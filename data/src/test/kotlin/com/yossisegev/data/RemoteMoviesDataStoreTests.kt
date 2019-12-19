@@ -7,8 +7,6 @@ import com.yossisegev.data.api.Api
 import com.yossisegev.data.api.MovieListResult
 import com.yossisegev.data.entities.DetailsData
 import com.yossisegev.data.entities.MovieData
-import com.yossisegev.data.mappers.DetailsDataMovieEntityMapper
-import com.yossisegev.data.mappers.MovieDataEntityMapper
 import com.yossisegev.data.repositories.RemoteMoviesDataStore
 import io.reactivex.Observable
 import org.junit.Before

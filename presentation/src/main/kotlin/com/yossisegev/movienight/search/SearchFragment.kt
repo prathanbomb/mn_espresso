@@ -1,12 +1,7 @@
 package com.yossisegev.movienight.search
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -18,6 +13,10 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.yossisegev.movienight.R
 import com.yossisegev.movienight.common.App
 import com.yossisegev.movienight.common.BaseFragment
@@ -130,9 +129,9 @@ class SearchFragment : BaseFragment(), TextWatcher {
     private fun showSoftKeyboard(show: Boolean) {
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         if (show) {
-           imm.toggleSoftInput(InputMethodManager.SHOW_FORCED,0)
+            imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
         } else {
-            imm.hideSoftInputFromWindow(searchEditText.windowToken,0)
+            imm.hideSoftInputFromWindow(searchEditText.windowToken, 0)
         }
     }
 

@@ -33,7 +33,7 @@ class MovieEntityMovieMapper @Inject constructor() : Mapper<MovieEntity, Movie>(
                 popularity = from.popularity,
                 originalLanguage = from.originalLanguage,
                 posterPath = from.posterPath?.let { posterBaseUrl + from.posterPath },
-                backdropPath = from.backdropPath?. let { backdropBaseUrl + from.backdropPath },
+                backdropPath = from.backdropPath?.let { backdropBaseUrl + from.backdropPath },
                 originalTitle = from.originalTitle,
                 adult = from.adult,
                 releaseDate = from.releaseDate,

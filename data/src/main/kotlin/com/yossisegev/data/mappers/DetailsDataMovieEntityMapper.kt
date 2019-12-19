@@ -50,13 +50,13 @@ class DetailsDataMovieEntityMapper @Inject constructor() : Mapper<DetailsData, M
                 videoData.site.equals(VideoEntity.SOURCE_YOUTUBE) &&
                         videoData.type.equals(VideoEntity.TYPE_TRAILER) //TODO: remove from here?
             }?.map { videoData ->
-                        return@map VideoEntity(
-                                id = videoData.id,
-                                name = videoData.name,
-                                youtubeKey = videoData.key
-                        )
+                return@map VideoEntity(
+                        id = videoData.id,
+                        name = videoData.name,
+                        youtubeKey = videoData.key
+                )
 
-                    }
+            }
             details.videos = videosEntities
         }
 

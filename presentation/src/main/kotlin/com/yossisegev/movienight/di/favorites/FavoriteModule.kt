@@ -1,10 +1,7 @@
 package com.yossisegev.movienight.di.favorites
 
 import com.yossisegev.domain.MoviesCache
-import com.yossisegev.domain.usecases.CheckFavoriteStatus
 import com.yossisegev.domain.usecases.GetFavoriteMovies
-import com.yossisegev.domain.usecases.RemoveFavoriteMovie
-import com.yossisegev.domain.usecases.SaveFavoriteMovie
 import com.yossisegev.movienight.MovieEntityMovieMapper
 import com.yossisegev.movienight.common.ASyncTransformer
 import com.yossisegev.movienight.di.DI

@@ -7,7 +7,6 @@ import com.yossisegev.domain.common.DomainTestUtils
 import com.yossisegev.domain.common.DomainTestUtils.Companion.generateMovieEntityList
 import com.yossisegev.domain.common.TestMoviesCache
 import com.yossisegev.domain.common.TestTransformer
-import com.yossisegev.domain.entities.MovieEntity
 import com.yossisegev.domain.entities.Optional
 import com.yossisegev.domain.usecases.*
 import io.reactivex.Observable

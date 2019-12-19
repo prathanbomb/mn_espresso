@@ -1,12 +1,12 @@
 package com.yossisegev.movienight
 
-import android.arch.lifecycle.Observer
 import android.util.Log
+import androidx.lifecycle.Observer
 
 /**
  * Created by Yossi Segev on 17/02/2018.
  */
-class ChangeHistoryObserver<T>: Observer<T> {
+class ChangeHistoryObserver<T> : Observer<T> {
 
     private val changeHistory = mutableListOf<T?>()
 

@@ -2,7 +2,6 @@ package com.yossisegev.data.utils
 
 import com.yossisegev.data.entities.DetailsData
 import com.yossisegev.data.entities.MovieData
-import com.yossisegev.domain.entities.MovieEntity
 
 /**
  * Created by Yossi Segev on 21/01/2018.

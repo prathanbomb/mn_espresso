@@ -1,8 +1,8 @@
 package com.yossisegev.data
 
-import android.arch.persistence.room.Room
-import android.support.test.InstrumentationRegistry
-import android.support.test.runner.AndroidJUnit4
+import androidx.room.Room
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import com.yossisegev.data.db.MoviesDao
 import com.yossisegev.data.db.MoviesDatabase
 import com.yossisegev.data.utils.TestsUtils
@@ -92,7 +92,7 @@ class RoomDatabaseTests {
         moviesDao.clear()
         assertTrue(moviesDao.getFavorites().isEmpty())
     }
-    
+
     @Test
     fun testSearchingMovieReturnsExpectedResults() {
         val movieData1 = TestsUtils.getMockedMovieData(150, "Star wars")

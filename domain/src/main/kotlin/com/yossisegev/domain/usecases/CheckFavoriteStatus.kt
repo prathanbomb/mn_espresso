@@ -3,8 +3,6 @@ package com.yossisegev.domain.usecases
 import com.yossisegev.domain.MoviesCache
 import com.yossisegev.domain.common.Transformer
 import io.reactivex.Observable
-import io.reactivex.ObservableTransformer
-import java.lang.IllegalArgumentException
 
 /**
  * Created by Yossi Segev on 09/02/2018.
